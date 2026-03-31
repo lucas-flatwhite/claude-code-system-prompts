@@ -52,6 +52,6 @@ description: [short description]
 
 ## 아키텍처 노트
 
-- `registerBundledSkill`로 등록된 스킬은 slash command로 사용할 수 있습니다.
+- `registerBundledSkill`로 등록된 스킬은 슬래시 명령으로 사용할 수 있습니다.
 - 생성된 `SKILL.md` 파일은 Claude Code에서 `/skill` 명령으로 호출할 수 있습니다.
 - `.claude/skills/` 디렉터리를 스캔하는 스킬 탐색 시스템과 통합됩니다.

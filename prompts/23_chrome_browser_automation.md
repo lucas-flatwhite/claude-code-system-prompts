@@ -5,7 +5,7 @@
 
 ## 목적
 
-Claude-in-Chrome MCP 확장을 통한 브라우저 자동화의 종합 지침을 제공합니다. GIF 녹화, 콘솔 디버깅, dialog 처리, 오류 복구, 탭 생명주기 관리를 다룹니다.
+Claude-in-Chrome MCP 확장을 통한 브라우저 자동화의 종합 지침을 제공합니다. GIF 녹화, 콘솔 디버깅, 대화상자 처리, 오류 복구, 탭 생명주기 관리를 다룹니다.
 
 ## 기본 Chrome 프롬프트
 
@@ -64,7 +64,7 @@ Never reuse tab IDs from a previous/other session. Follow these guidelines:
 
 ## Tool Search 지침
 
-tool search가 활성화될 때 주입되며, Tool 사용 전에 로드가 필요함을 요구합니다.
+Tool Search가 활성화될 때 주입되며, Tool 사용 전에 로드가 필요함을 요구합니다.
 
 ```
 **IMPORTANT: Before using any chrome browser tools, you MUST first load them
@@ -78,7 +78,7 @@ Before calling any mcp__claude-in-chrome__* tool:
 
 ## 스킬 힌트
 
-내장 WebBrowser Tool 사용 가능 여부에 따라 두 가지 변형이 존재합니다.
+내장 `WebBrowser` Tool 사용 가능 여부에 따라 두 가지 변형이 존재합니다.
 
 **WebBrowser 없음:**
 ```
@@ -100,4 +100,4 @@ mcp__claude-in-chrome__* tool.
 - Chrome 확장이 감지되면 시작 시 스킬 힌트가 주입됩니다.
 - 기본 프롬프트는 메인 시스템 프롬프트에 직접 주입되지 않고 스킬 시스템을 통해 로드됩니다.
 - 탭 ID 격리는 세션 간 오염을 방지합니다.
-- browser modal이 확장의 event loop를 막기 때문에 dialog 회피가 중요합니다.
+- 브라우저 modal이 확장의 event loop를 막기 때문에 대화상자 회피가 중요합니다.

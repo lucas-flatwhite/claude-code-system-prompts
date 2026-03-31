@@ -1,8 +1,8 @@
-# Proactive / Autonomous Mode
+# Proactive / Autonomous 모드
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> `PROACTIVE` 또는 `KAIROS` 플래그 뒤에 있는 기능입니다. tick 기반 keep-alive, pacing, 터미널 포커스 인식을 포함한 완전한 자율 에이전트 동작을 활성화합니다.
+> `PROACTIVE` 또는 `KAIROS` 플래그 뒤에 있는 기능입니다. tick 기반 keep-alive, 간격 조절(pacing), 터미널 포커스 인식을 포함한 완전한 자율 에이전트 동작을 활성화합니다.
 
 ---
 
@@ -72,8 +72,8 @@ The user context may include a `terminalFocus` field indicating whether the user
 
 ## 핵심 설계 결정
 
-1. **Tick-based keep-alive**: 지속적인 polling 대신 `<tick>` 메시지를 heartbeat로 사용합니다.
-2. **Sleep as explicit action**: 유휴 텍스트를 출력하는 대신 모델이 `Sleep` Tool을 호출하도록 강제합니다.
-3. **Cache-aware pacing**: 프롬프트 캐시는 5분 후 만료되므로, 모델은 sleep 시간과 캐시 재사용 사이를 균형 있게 조절해야 합니다.
-4. **Focus-based autonomy**: 터미널 포커스 상태가 에이전트의 자율성 수준에 영향을 줍니다.
-5. **Anti-narration**: 액션을 실시간 중계하듯 서술하는 것을 명시적으로 금지합니다.
+1. **Tick 기반 keep-alive**: 지속적인 polling 대신 `<tick>` 메시지를 heartbeat로 사용합니다.
+2. **명시적 액션으로서의 Sleep**: 유휴 텍스트를 출력하는 대신 모델이 `Sleep` Tool을 호출하도록 강제합니다.
+3. **캐시 인식 간격 조절**: 프롬프트 캐시는 5분 후 만료되므로, 모델은 sleep 시간과 캐시 재사용 사이를 균형 있게 조절해야 합니다.
+4. **포커스 기반 자율성**: 터미널 포커스 상태가 에이전트의 자율성 수준에 영향을 줍니다.
+5. **과도한 중계 금지**: 액션을 실시간 중계하듯 서술하는 것을 명시적으로 금지합니다.

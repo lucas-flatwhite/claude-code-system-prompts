@@ -6,7 +6,7 @@
 
 ## 목적
 
-`settings.json` 설정 파일을 관리합니다. hooks, permission 배열, 일반 설정을 포함합니다. Claude Code 설정 계층을 편집할 수 있도록 안내형 인터페이스를 제공합니다.
+`settings.json` 설정 파일을 관리합니다. hook, permission 배열, 일반 설정을 포함합니다. Claude Code 설정 계층을 편집할 수 있도록 안내형 인터페이스를 제공합니다.
 
 ## 프롬프트 (바이너리 분석을 바탕으로 재구성)
 
@@ -59,7 +59,7 @@ Permission settings control which tools can run without user approval:
 
 ## 아키텍처 노트
 
-- 이 스킬은 "simple" config tool(키-값 설정)과 "complex" 작업(hooks, permissions)을 구분합니다.
-- hook 편집 시 settings.json 파일에 대해 Edit Tool을 직접 사용합니다.
+- 이 스킬은 "simple" config tool(키-값 설정)과 "complex" 작업(hook, permission)을 구분합니다.
+- hook 편집 시 `settings.json` 파일에 대해 Edit Tool을 직접 사용합니다.
 - 각 편집 후 JSON 문법을 검증합니다.
 - 하나의 인터페이스에서 세 가지 설정 레벨을 모두 지원합니다.

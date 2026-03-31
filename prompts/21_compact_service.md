@@ -6,7 +6,7 @@
 
 ## 목적
 
-컨텍스트 윈도가 한계에 가까워질 때 상세한 대화 요약을 생성합니다. compact service에는 세 가지 동작 모드가 있습니다. 전체 압축, 최근 메시지 부분 압축, 이전 메시지 부분 압축입니다.
+컨텍스트 윈도가 한계에 가까워질 때 상세한 대화 요약을 생성합니다. Compact 서비스에는 세 가지 동작 모드가 있습니다. 전체 압축, 최근 메시지 부분 압축, 이전 메시지 부분 압축입니다.
 
 ## 도구 금지 서문
 
@@ -35,15 +35,15 @@ without losing context.
 
 ### 필수 요약 섹션
 
-1. **Primary Request and Intent** — 모든 명시적 사용자 요청과 의도
-2. **Key Technical Concepts** — 논의된 기술, 프레임워크, 패턴
-3. **Files and Code Sections** — 전체 코드 스니펫과 함께 검토/수정/생성한 파일
-4. **Errors and Fixes** — 발생한 오류와 해결 단계
-5. **Problem Solving** — 해결된 문제와 진행 중인 트러블슈팅
-6. **All User Messages** — Tool 결과가 아닌 모든 사용자 메시지 (의도 변화 추적에 중요)
-7. **Pending Tasks** — 남아 있는 작업 항목
-8. **Current Work** — 요약 직전 진행 중이던 작업의 정확한 설명
-9. **Optional Next Step** — 최근 사용자 요청과 직접 맞닿는 경우에만 다음 단계
+1. **주요 요청과 의도(Primary Request and Intent)** — 모든 명시적 사용자 요청과 의도
+2. **핵심 기술 개념(Key Technical Concepts)** — 논의된 기술, 프레임워크, 패턴
+3. **파일과 코드 구간(Files and Code Sections)** — 전체 코드 스니펫과 함께 검토/수정/생성한 파일
+4. **오류와 수정(Errors and Fixes)** — 발생한 오류와 해결 단계
+5. **문제 해결(Problem Solving)** — 해결된 문제와 진행 중인 트러블슈팅
+6. **모든 사용자 메시지(All User Messages)** — Tool 결과가 아닌 모든 사용자 메시지 (의도 변화 추적에 중요)
+7. **보류 작업(Pending Tasks)** — 남아 있는 작업 항목
+8. **현재 작업(Current Work)** — 요약 직전 진행 중이던 작업의 정확한 설명
+9. **선택적 다음 단계(Optional Next Step)** — 최근 사용자 요청과 직접 맞닿는 경우에만 다음 단계
 
 ## 부분 Compact 프롬프트 (최근 메시지)
 
@@ -91,7 +91,7 @@ your thoughts and ensure you've covered all necessary points. In your analysis p
 
 ## 사용자 지정 지침 지원
 
-compact 프롬프트는 CLAUDE.md 또는 hook을 통한 사용자 지정 요약 지침을 지원합니다.
+Compact 프롬프트는 CLAUDE.md 또는 hook을 통한 사용자 지정 요약 지침을 지원합니다.
 
 ```
 There may be additional summarization instructions provided in the included context.
@@ -100,6 +100,6 @@ If so, remember to follow these instructions when creating the above summary.
 
 ## 아키텍처 노트
 
-- **Cache-sharing fork**: 부모의 프롬프트 캐시를 상속하는 forked process입니다. 전체 Tool 세트도 상속하므로 `NO_TOOLS_PREAMBLE`가 필요합니다.
-- **Streaming fallback**: fork 경로가 실패하면 (예: 모델이 `maxTurns: 1` 상태에서 Tool 호출 시도) 표준 streaming query로 넘어갑니다.
-- **Proactive mode integration**: proactive mode 또는 Kairos가 활성화되면 proactive 작업에 대한 추가 컨텍스트가 덧붙습니다.
+- **Cache-sharing fork**: 부모의 프롬프트 캐시를 상속하는 분기 프로세스입니다. 전체 Tool 세트도 상속하므로 `NO_TOOLS_PREAMBLE`가 필요합니다.
+- **Streaming fallback**: fork 경로가 실패하면 (예: 모델이 `maxTurns: 1` 상태에서 Tool 호출 시도) 표준 스트리밍 질의로 넘어갑니다.
+- **Proactive mode integration**: Proactive mode 또는 Kairos가 활성화되면 proactive 작업에 대한 추가 컨텍스트가 덧붙습니다.

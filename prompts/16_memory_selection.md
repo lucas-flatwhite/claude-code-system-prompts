@@ -53,10 +53,10 @@ Recently used tools: {tool1, tool2, ...}
 | **Max Tokens** | 256 |
 | **Output Format** | 구조화된 JSON 스키마 |
 | **Max Results** | 메모리 파일 5개 |
-| **Exclusions** | `MEMORY.md` (이미 시스템 프롬프트에 있음), 이전에 노출된 파일 |
-| **Tool Filtering** | 최근 사용한 Tool의 API 문서는 건너뛰지만 gotcha/warning은 유지 |
+| **Exclusions** | `MEMORY.md` (이미 시스템 프롬프트에 포함됨), 이전에 노출된 파일 |
+| **Tool Filtering** | 최근 사용한 Tool의 API 문서는 건너뛰되 주의사항/known issue는 유지 |
 
-## Selection Pipeline
+## 선택 파이프라인
 
 ```
 User query arrives

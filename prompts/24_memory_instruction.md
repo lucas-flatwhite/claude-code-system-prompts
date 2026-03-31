@@ -19,15 +19,15 @@ exactly as written.
 
 파일은 우선순위의 역순으로 로드됩니다 (나중일수록 우선순위 높음).
 
-1. **Managed memory** (`/etc/claude-code/CLAUDE.md`) — 모든 사용자를 위한 전역 지침
-2. **User memory** (`~/.claude/CLAUDE.md`) — 모든 프로젝트에 적용되는 개인 전역 지침
-3. **Project memory** (`CLAUDE.md`, `.claude/CLAUDE.md`, `.claude/rules/*.md` in project roots) — 코드베이스에 커밋되는 지침
-4. **Local memory** (`CLAUDE.local.md` in project roots) — 개인 프로젝트 전용 지침
+1. **관리 메모리(Managed memory)** (`/etc/claude-code/CLAUDE.md`) — 모든 사용자를 위한 전역 지침
+2. **사용자 메모리(User memory)** (`~/.claude/CLAUDE.md`) — 모든 프로젝트에 적용되는 개인 전역 지침
+3. **프로젝트 메모리(Project memory)** (`CLAUDE.md`, `.claude/CLAUDE.md`, `.claude/rules/*.md` in project roots) — 코드베이스에 커밋되는 지침
+4. **로컬 메모리(Local memory)** (`CLAUDE.local.md` in project roots) — 개인 프로젝트 전용 지침
 
 ## 파일 탐색
 
 - 사용자 메모리는 `~/.claude/`에서 로드됩니다.
-- Project 및 Local 파일은 현재 디렉터리에서 루트까지 거슬러 올라가며 탐색됩니다.
+- 프로젝트 및 로컬 파일은 현재 디렉터리에서 루트까지 거슬러 올라가며 탐색됩니다.
 - 현재 디렉터리에 가까운 파일일수록 우선순위가 높습니다 (나중에 로드됨).
 - 각 디렉터리에서 `CLAUDE.md`, `.claude/CLAUDE.md`, `.claude/rules/` 아래 모든 `.md` 파일을 확인합니다.
 
@@ -36,7 +36,7 @@ exactly as written.
 메모리 파일은 전이적 파일 포함을 지원합니다.
 
 - 문법: `@path`, `@./relative/path`, `@~/home/path`, 또는 `@/absolute/path`
-- leaf text node에서만 동작합니다 (코드 블록 내부 제외).
+- 말단 텍스트 노드에서만 동작합니다 (코드 블록 내부 제외).
 - 처리한 파일을 추적하여 순환 참조를 방지합니다.
 - 존재하지 않는 파일은 조용히 무시됩니다.
 - 최대 include 깊이: 5
