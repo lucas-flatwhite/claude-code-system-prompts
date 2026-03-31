@@ -59,7 +59,7 @@ Permission settings control which tools can run without user approval:
 
 ## 아키텍처 노트
 
-- 이 스킬은 "simple" config tool(키-값 설정)과 "complex" 작업(hook, permission)을 구분합니다.
+- 이 스킬은 "simple" 설정 작업(키-값 설정)과 "complex" 작업(hook, permission)을 구분합니다.
 - hook 편집 시 `settings.json` 파일에 대해 Edit Tool을 직접 사용합니다.
 - 각 편집 후 JSON 문법을 검증합니다.
 - 하나의 인터페이스에서 세 가지 설정 레벨을 모두 지원합니다.

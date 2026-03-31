@@ -2,7 +2,7 @@
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> Haiku를 사용해 Tool 호출이 무엇을 수행했는지 요약하는 짧은 git commit 스타일 라벨을 생성합니다. 모바일 앱에서는 한 줄짜리 row로 표시됩니다.
+> Haiku를 사용해 Tool 호출이 무엇을 수행했는지 요약하는 짧은 git commit 스타일 라벨을 생성합니다. 모바일 앱에서는 한 줄짜리 항목(row)으로 표시됩니다.
 
 ---
 
@@ -41,6 +41,6 @@ Label:
 |----------|-------|
 | **Model** | Haiku |
 | **Query Source** | `tool_use_summary_generation` |
-| **Prompt Caching** | Enabled |
+| **Prompt Caching** | 활성화 |
 | **Criticality** | 비중요 (실패는 기록되지만 무시됨) |
 | **Input Truncation** | Tool 입력/출력당 300자 |

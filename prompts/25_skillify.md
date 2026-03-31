@@ -48,7 +48,7 @@ description: [short description]
 
 ## 출력
 
-`.claude/skills/` 또는 사용자가 선호하는 위치에 `SKILL.md` 파일을 생성합니다. 파일은 `name`, `description` 필드를 포함한 YAML frontmatter가 있는 표준 스킬 형식을 따릅니다.
+`.claude/skills/` 또는 사용자가 선호하는 위치에 `SKILL.md` 파일을 생성합니다. 파일은 `name`, `description` 필드를 포함한 YAML 프론트매터(frontmatter)가 있는 표준 스킬 형식을 따릅니다.
 
 ## 아키텍처 노트
 

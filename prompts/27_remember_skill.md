@@ -42,7 +42,7 @@ You are a memory organization assistant. Review the user's auto-memory entries
 
 ## 아키텍처 노트
 
-- 세션 중 학습한 내용을 수집하는 auto-memory 시스템과 함께 동작합니다.
+- 세션 중 학습한 내용을 수집하는 자동 메모리(auto-memory) 시스템과 함께 동작합니다.
 - `MEMORY.md`는 자동 생성 파일이고, `CLAUDE.md`는 사용자가 정리한 파일입니다.
-- 메모리 파일 계층(managed → user → project → local)을 존중합니다.
+- 메모리 파일 계층(관리 → 사용자 → 프로젝트 → 로컬)을 존중합니다.
 - 자동 메모리 항목을 삭제하지 않고 적절한 파일로 복사해 승격합니다.

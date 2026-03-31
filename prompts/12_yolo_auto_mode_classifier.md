@@ -8,12 +8,12 @@
 
 ## 아키텍처 개요
 
-YOLO 분류기(classifier)는 Claude Code에서 **가장 보안에 민감한 구성 요소**입니다. 사용자가 "auto mode"(이전의 "YOLO mode")를 활성화하면, 이 분류기가 모든 Tool 호출을 실행 전에 평가합니다.
+YOLO 분류기(classifier)는 Claude Code에서 **가장 보안에 민감한 구성 요소**입니다. 사용자가 "auto mode"(이전 명칭은 "YOLO mode")를 활성화하면, 이 분류기가 모든 Tool 호출을 실행 전에 평가합니다.
 
 ### 동작 방식
 
-1. **Base Prompt**: `yolo-classifier-prompts/auto_mode_system_prompt.txt`에서 로드됩니다 (`bun:bundle` feature flag `TRANSCRIPT_CLASSIFIER`로 빌드 시 번들됨).
-2. **Permissions Template**: 사용자 유형에 따라 런타임에 교체됩니다.
+1. **기본 프롬프트(Base Prompt)**: `yolo-classifier-prompts/auto_mode_system_prompt.txt`에서 로드됩니다 (`bun:bundle` feature flag `TRANSCRIPT_CLASSIFIER`로 빌드 시 번들됨).
+2. **권한 템플릿(Permissions Template)**: 사용자 유형에 따라 런타임에 교체됩니다.
    - **외부 사용자**: `permissions_external.txt`
    - **Anthropic 직원** (`USER_TYPE=ant`): `permissions_anthropic.txt`
 3. **사용자 규칙(User Rules)**: 사용자 지정 가능한 세 개의 섹션이 `settings.autoMode`에서 주입됩니다.
@@ -83,9 +83,9 @@ as part of the user's intent when evaluating actions.
 - 분류기 Tool 자체 (`classify_result`)
 - 여러 안전한 유틸리티
 
-### 대화 Transcript
+### 대화 기록(Transcript)
 
-분류기는 대화의 **축약 transcript**를 받습니다.
+분류기는 대화의 **축약 기록(transcript)**을 받습니다.
 - 사용자 메시지: 텍스트만
 - assistant 메시지: **tool_use 블록만** (모델이 분류기에 영향을 주는 텍스트를 작성하지 못하도록 텍스트는 제외됨)
 

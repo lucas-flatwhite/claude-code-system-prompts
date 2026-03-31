@@ -2,7 +2,7 @@
 
 **관찰 위치**: Claude Code 내부 아키텍처
 **변수:** `SUGGESTION_PROMPT`
-**모델:** Small fast model (Haiku)
+**모델:** 소형 고속 모델 (Haiku)
 
 ## 목적
 

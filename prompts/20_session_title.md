@@ -7,7 +7,7 @@
 
 ## 목적
 
-대화 내용으로부터 간결한 sentence-case 세션 제목(3~7단어)을 생성합니다. SDK, CCR 원격 세션, REPL bridge 전반에서 AI 생성 세션 제목의 단일 기준 역할을 합니다.
+대화 내용으로부터 간결한 sentence-case 세션 제목(3~7단어)을 생성합니다. SDK, CCR 원격 세션, REPL 브리지 전반에서 AI 생성 세션 제목의 단일 기준 역할을 합니다.
 
 ## 시스템 프롬프트
 
@@ -36,6 +36,6 @@ Bad (wrong case): {"title": "Fix Login Button On Mobile"}
 
 ## 통합 지점
 
-- **SDK print path**: 비대화형 세션 제목 생성
-- **CCR remote sessions**: `useRemoteSession`을 통한 대화형 세션 제목 생성
-- **REPL bridge**: 사용자 메시지 3개 이후 fire-and-forget 방식으로 제목을 갱신
+- **SDK 출력 경로(print path)**: 비대화형 세션 제목 생성
+- **CCR 원격 세션(remote sessions)**: `useRemoteSession`을 통한 대화형 세션 제목 생성
+- **REPL 브리지(REPL bridge)**: 사용자 메시지 3개 이후 fire-and-forget 방식으로 제목을 갱신

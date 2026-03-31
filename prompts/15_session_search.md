@@ -2,7 +2,7 @@
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> LLM을 사용해 과거 대화 세션 전반에 대해 시맨틱 검색을 수행합니다. `/resume` 및 session picker UI에서 사용됩니다.
+> LLM을 사용해 과거 대화 세션 전반에 대해 시맨틱 검색을 수행합니다. `/resume` 및 세션 선택기(session picker) UI에서 사용됩니다.
 
 ---
 
@@ -49,13 +49,13 @@ Respond with ONLY the JSON object, no markdown formatting:
 
 | 속성 | 값 |
 |----------|-------|
-| **Model** | Small/Fast model (via `getSmallFastModel()`) |
+| **Model** | 소형 고속 모델 (via `getSmallFastModel()`) |
 | **Query Source** | `session_search` |
 | **Max Sessions Searched** | 100 |
 | **Max Transcript Chars** | 세션당 2000자 |
 | **Max Messages Scanned** | 100 (앞 50개 + 뒤 50개) |
-| **Pre-filter** | LLM 호출 전 텍스트 매칭 (title, tag, branch, summary, transcript) |
-| **Output Format** | Raw JSON `{"relevant_indices": [...]}` |
+| **Pre-filter** | LLM 호출 전 텍스트 사전 매칭 (title, tag, branch, summary, transcript) |
+| **Output Format** | 원시 JSON `{"relevant_indices": [...]}` |
 
 ## 검색 파이프라인
 

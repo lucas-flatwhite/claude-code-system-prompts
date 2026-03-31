@@ -49,11 +49,11 @@ Bash Tool에는 상세한 git commit 및 PR 지침이 포함됩니다.
 - **PR 워크플로**: 구조화된 본문 형식과 함께 `gh pr create`를 사용합니다.
 - **HEREDOC 형식**: 올바른 포맷을 위해 항상 `git commit -m "$(cat <<'EOF' ... EOF)"`를 사용합니다.
 
-### Sandbox 시스템
+### 샌드박스 시스템
 
-sandboxing이 활성화되면 Bash Tool에는 파일시스템 및 네트워크 제한 설정이 포함됩니다.
-- 읽기 deny-only 목록
-- 쓰기 allow-only 목록  
+sandboxing이 활성화되면 Bash Tool에는 파일 시스템 및 네트워크 제한 설정이 포함됩니다.
+- 읽기 전용 차단 목록(deny-only)
+- 쓰기 전용 허용 목록(allow-only)
 - 네트워크 허용/차단 호스트
 - 임시 파일은 `/tmp`가 아니라 `$TMPDIR`를 사용해야 합니다.
 
@@ -126,7 +126,7 @@ Forks are cheap because they share your prompt cache. Don't set `model` on a for
 | `Grep` | `GrepTool/prompt.ts` | 정규식으로 파일 내용을 검색 |
 | `WebFetch` | `WebFetchTool/prompt.ts` | URL 내용을 가져옴 |
 | `WebSearch` | `WebSearchTool/prompt.ts` | 웹을 검색 |
-| `NotebookEdit` | `NotebookEditTool/prompt.ts` | Jupyter notebook을 편집 |
+| `NotebookEdit` | `NotebookEditTool/prompt.ts` | Jupyter 노트북을 편집 |
 | `Config` | `ConfigTool/prompt.ts` | Claude Code 설정을 관리 |
 | `EnterPlanMode` | `EnterPlanModeTool/prompt.ts` | 계획 모드에 진입 |
 | `ExitPlanMode` | `ExitPlanModeTool/prompt.ts` | 계획 모드를 종료 |
@@ -147,7 +147,7 @@ Forks are cheap because they share your prompt cache. Don't set `model` on a for
 | `LSP` | `LSPTool/prompt.ts` | Language Server Protocol |
 | `MCP` | `MCPTool/prompt.ts` | Model Context Protocol Tool |
 | `PowerShell` | `PowerShellTool/prompt.ts` | Windows PowerShell 실행 |
-| `Brief` | `BriefTool/prompt.ts` | brief 출력 모드를 설정 |
+| `Brief` | `BriefTool/prompt.ts` | 간략 출력 모드를 설정 |
 | `AskUserQuestion` | `AskUserQuestionTool/prompt.ts` | 사용자에게 질문 |
 | `ReadMcpResource` | `ReadMcpResourceTool/prompt.ts` | MCP 서버 리소스를 읽음 |
 | `ListMcpResources` | `ListMcpResourcesTool/prompt.ts` | MCP 리소스를 나열 |

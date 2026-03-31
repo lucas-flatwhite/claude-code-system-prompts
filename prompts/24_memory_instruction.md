@@ -42,9 +42,9 @@ exactly as written.
 - 최대 include 깊이: 5
 - 텍스트 파일 확장자만 허용합니다 (이미지, PDF 등 로드 방지).
 
-## Frontmatter 지원
+## 프론트매터(Frontmatter) 지원
 
-메모리 파일은 조건부 주입을 위한 `paths` 필드를 가진 YAML frontmatter를 지원합니다.
+메모리 파일은 조건부 주입을 위한 `paths` 필드를 가진 YAML 프론트매터(frontmatter)를 지원합니다.
 
 ```yaml
 ---
@@ -54,7 +54,7 @@ paths:
 ---
 ```
 
-`paths` frontmatter가 있는 파일은 활성 파일이 glob 패턴과 일치할 때만 주입됩니다.
+`paths` 프론트매터(frontmatter)가 있는 파일은 활성 파일이 glob 패턴과 일치할 때만 주입됩니다.
 
 ## 구성
 

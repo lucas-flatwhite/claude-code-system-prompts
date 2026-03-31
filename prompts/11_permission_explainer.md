@@ -2,7 +2,7 @@
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> 사용자가 승인하기 전에 Tool/명령이 무엇을 하는지, 왜 실행되는지, 위험 수준이 무엇인지 설명하는 경량 side-query입니다. 구조화된 Tool 출력을 사용해 JSON 응답을 보장합니다.
+> 사용자가 승인하기 전에 Tool/명령이 무엇을 하는지, 왜 실행되는지, 위험 수준이 무엇인지 설명하는 경량 보조 질의(side-query)입니다. 구조화된 Tool 출력을 사용해 JSON 형식 응답을 보장합니다.
 
 ---
 
@@ -33,7 +33,7 @@ Analyze shell commands and explain what they do, why you're running them, and po
 
 ## 런타임 동작
 
-- **main loop model**을 사용합니다 (별도 Haiku 모델 아님).
-- permission prompt와 동시에 **side query**로 실행됩니다.
-- "why" 컨텍스트를 위해 최근 assistant 메시지 3개(최대 1000자)를 추출합니다.
+- **메인 루프 모델(main loop model)**을 사용합니다 (별도 Haiku 모델 아님).
+- 권한 프롬프트(permission prompt)와 동시에 **보조 질의(side query)**로 실행됩니다.
+- `"why"` 컨텍스트를 위해 최근 assistant 메시지 3개(최대 1000자)를 추출합니다.
 - 사용자 설정 `permissionExplainerEnabled: false`로 비활성화할 수 있습니다.

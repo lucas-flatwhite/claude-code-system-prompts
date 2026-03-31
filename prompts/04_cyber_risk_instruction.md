@@ -2,9 +2,9 @@
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> **소유 팀**: Safeguards team (David Forsythe, Kyla Guru)
+> **소유 팀**: Safeguards 팀 (David Forsythe, Kyla Guru)
 >
-> 이 지침은 허용 가능한 방어 보안 지원과 잠재적으로 유해한 활동 사이의 경계를 정의합니다. 변경에는 Safeguards team의 검토가 필요합니다.
+> 이 지침은 허용 가능한 방어 보안 지원과 잠재적으로 유해한 활동 사이의 경계를 정의합니다. 변경에는 Safeguards 팀의 검토가 필요합니다.
 
 ---
 
@@ -26,4 +26,4 @@ IMPORTANT: Assist with authorized security testing, defensive security, CTF chal
 | 대량 타기팅 | - | ❌ 항상 |
 | 공급망 침해 | - | ❌ 항상 |
 | 탐지 회피 | - | ❌ 악의적 목적일 때 |
-| 이중용도 Tool (C2, credential testing) | ✅ 권한이 있을 때 | ❌ 맥락이 없을 때 |
+| 이중용도 Tool (C2, 자격 증명 테스트) | ✅ 권한이 있을 때 | ❌ 맥락이 없을 때 |

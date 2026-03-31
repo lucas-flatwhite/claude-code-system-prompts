@@ -2,7 +2,7 @@
 
 > **관찰 위치**: Claude Code 내부 아키텍처
 >
-> 사용자가 작성한 auto-mode classifier 규칙의 품질을 검토합니다. `claude auto-mode critique`로 호출됩니다.
+> 사용자가 작성한 auto-mode 분류기(classifier) 규칙의 품질을 검토합니다. `claude auto-mode critique`로 호출됩니다.
 
 ---
 
@@ -52,4 +52,4 @@ Please critique these custom rules.
 | **Query Source** | `auto_mode_critique` |
 | **Max Tokens** | 4096 |
 | **Invocation** | `claude auto-mode critique` CLI 명령 |
-| **Rule Semantics** | 사용자 섹션은 기본값을 완전히 대체합니다 (merge 아님) |
+| **Rule Semantics** | 사용자 섹션은 기본값을 완전히 대체합니다 (병합 아님) |
